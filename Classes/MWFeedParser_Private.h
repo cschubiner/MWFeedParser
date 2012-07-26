@@ -33,17 +33,17 @@
 
 // Feed Downloading Properties
 @property (nonatomic, copy) NSURL *url;
-@property (nonatomic, retain) NSURLConnection *urlConnection;
-@property (nonatomic, retain) NSMutableData *asyncData;
-@property (nonatomic, retain) NSString *asyncTextEncodingName;
+@property (nonatomic) NSURLConnection *urlConnection;
+@property (nonatomic) NSMutableData *asyncData;
+@property (unsafe_unretained, unsafe_unretained, nonatomic) NSString *asyncTextEncodingName;
 
 // Parsing Properties
-@property (nonatomic, retain) NSXMLParser *feedParser;
-@property (nonatomic, retain) NSString *currentPath;
-@property (nonatomic, retain) NSMutableString *currentText;
-@property (nonatomic, retain) NSDictionary *currentElementAttributes;
-@property (nonatomic, retain) MWFeedItem *item;
-@property (nonatomic, retain) MWFeedInfo *info;
+@property (unsafe_unretained, unsafe_unretained, nonatomic) NSXMLParser *feedParser;
+@property (unsafe_unretained, unsafe_unretained, nonatomic) NSString *currentPath;
+@property (nonatomic,strong) NSMutableString *currentText;
+@property (unsafe_unretained, unsafe_unretained, nonatomic) NSDictionary *currentElementAttributes;
+@property (unsafe_unretained, unsafe_unretained, nonatomic) MWFeedItem *item;
+@property (unsafe_unretained, unsafe_unretained, nonatomic) MWFeedInfo *info;
 @property (nonatomic, copy) NSString *pathOfElementWithXHTMLType;
 
 #pragma mark Private Methods

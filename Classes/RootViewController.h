@@ -37,12 +37,12 @@
 	NSMutableArray *parsedItems;
 	
 	// Displaying
-	NSArray *itemsToDisplay;
+	NSArray *__unsafe_unretained itemsToDisplay;
 	NSDateFormatter *formatter;
 	
 }
 
 // Properties
-@property (nonatomic, retain) NSArray *itemsToDisplay;
+@property (unsafe_unretained, nonatomic) NSArray *itemsToDisplay;
 
 @end

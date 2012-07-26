@@ -31,12 +31,12 @@
 
 @interface MWFeedParserAppDelegate : NSObject <UIApplicationDelegate> {
     
-    UIWindow *window;
-    UINavigationController *navigationController;
+    UIWindow *__unsafe_unretained window;
+    UINavigationController *__unsafe_unretained navigationController;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+@property (unsafe_unretained, nonatomic) IBOutlet UIWindow *window;
+@property (unsafe_unretained, nonatomic) IBOutlet UINavigationController *navigationController;
 
 @end
 

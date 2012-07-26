@@ -70,17 +70,17 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 @private
 	
 	// Required
-	id <MWFeedParserDelegate> delegate;
+	id <MWFeedParserDelegate> __unsafe_unretained delegate;
 	
 	// Connection
 	NSURLConnection *urlConnection;
 	NSMutableData *asyncData;
-	NSString *asyncTextEncodingName;
+	NSString *__unsafe_unretained asyncTextEncodingName;
 	ConnectionType connectionType;
 	
 	// Parsing
 	ParseType feedParseType;
-	NSXMLParser *feedParser;
+	NSXMLParser *__unsafe_unretained feedParser;
 	FeedType feedType;
 	NSDateFormatter *dateFormatterRFC822, *dateFormatterRFC3339;
 	
@@ -98,18 +98,18 @@ typedef enum { FeedTypeUnknown, FeedTypeRSS, FeedTypeRSS1, FeedTypeAtom } FeedTy
 	BOOL parseStructureAsContent; // For atom feeds when element type="xhtml"
 	
 	// Parsing Data
-	NSString *currentPath;
+	NSString *__unsafe_unretained currentPath;
 	NSMutableString *currentText;
-	NSDictionary *currentElementAttributes;
-	MWFeedItem *item;
-	MWFeedInfo *info;
+	NSDictionary *__unsafe_unretained currentElementAttributes;
+	MWFeedItem *__unsafe_unretained item;
+	MWFeedInfo *__unsafe_unretained info;
 	
 }
 
 #pragma mark Public Properties
 
 // Delegate to recieve data as it is parsed
-@property (nonatomic, assign) id <MWFeedParserDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id <MWFeedParserDelegate> delegate;
 
 // Whether to parse feed info & all items, just feed info, or just feed items
 @property (nonatomic) ParseType feedParseType;

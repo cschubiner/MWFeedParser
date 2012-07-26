@@ -31,11 +31,11 @@
 #import "MWFeedItem.h"
 
 @interface DetailTableViewController : UITableViewController {
-	MWFeedItem *item;
-	NSString *dateString, *summaryString;
+	MWFeedItem *__unsafe_unretained item;
+	NSString *__unsafe_unretained dateString, *__unsafe_unretained summaryString;
 }
 
-@property (nonatomic, retain) MWFeedItem *item;
-@property (nonatomic, retain) NSString *dateString, *summaryString;
+@property (unsafe_unretained, nonatomic) MWFeedItem *item;
+@property (unsafe_unretained, nonatomic) NSString *dateString, *summaryString;
 
 @end
